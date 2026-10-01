@@ -5,9 +5,9 @@ function MovieResults({ movies, searchTerm }) {
 
   return (
     <div>
-      {filteredMovies.map((movie) => (
-        <h3 key={movie.id}>{movie.title}</h3>
-      ))}
+      {filteredMovies.length === 0
+        ? "No movies found"
+        : filteredMovies.map((movie) => <h3 key={movie.id}>{movie.title}</h3>)}
     </div>
   );
 }
